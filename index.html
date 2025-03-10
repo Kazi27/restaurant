@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dave's Hot Chicken - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="logo"><img src="daveshotchickenlogo.png" alt="Dave's Hot Chicken Logo" style="height: 60px;"></div>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="hero-banner.jpg" alt="Dave's Hot Chicken Banner" style="width:100%; max-height: 500px; object-fit: cover;">
+        <div class="hero-text">
+            <h1>What Happens In DAVE'S Stays In Dave's</h1>
+            <p>Explore the taste of our legendary hot chicken</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <h2>About Us</h2>
+        <p>At Dave's Hot Chicken, experience the heat and flavor that started in Hollywood and spread fire worldwide!</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Follow us on:</p>
+        <a href="#">Facebook</a> | <a href="#">Instagram</a>
+        <p>📍 123 Food Street, New York</p>
+        <p>Open Hours: Mon-Sat 10am - 10pm</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
