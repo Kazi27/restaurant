@@ -3,206 +3,415 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Page</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f0f0f0;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #fa4a0c;
-            color: #ffffff;
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        h1, h2, h3 {
-            margin: 10px 0;
-        }
-
-        .menu-category {
-            background-color: #ffffff;
-            padding: 20px;
-            margin: 10px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-
-        .menu-item {
-            display: flex;
-            align-items: center;
-            margin-top: 20px;
-        }
-
-        .menu-item img {
-            width: 150px;
-            height: 150px;
-            border-radius: 8px;
-            margin-right: 20px;
-            object-fit: cover;
-        }
-
-        .menu-item div {
-            flex-grow: 1;
-        }
-
-        span {
-            font-weight: bold;
-            color: #fa4a0c;
-        }
-
-        @media (max-width: 600px) {
-            .menu-item {
-                flex-direction: column;
-                align-items: start;
-            }
-
-            .menu-item img {
-                width: 100%;
-                margin-bottom: 10px;
-            }
-        }
-    </style>
+    <title>Dave's Hot Chicken - Menu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header & Navigation -->
     <header>
-        <h1>Our Delicious Menu</h1>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="daveshotchickenlogo.png" alt="Dave's Hot Chicken Logo">
+                <span class="restaurant-name">Dave's Hot Chicken</span>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html" class="active">Menu</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="order-btn"><a href="#" class="btn">Order Now</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <section class="menu-category">
-        <h2>Chicken</h2>
-        <div class="menu-item">
-            <img src="393238143a0f41a4ac4730155688c772.avif" alt="Spicy Grilled Chicken">
-            <div>
-                <h3>Spicy Grilled Chicken</h3>
-                <p>Deliciously marinated with a spicy rub, grilled to perfection.</p>
-                <span>$12.99</span>
-            </div>
-        </div>
-        <div class="menu-item">
-            <img src="cb06e1d5fe0c44caa98a82824cf39aad.avif" alt="Honey Garlic Chicken">
-            <div>
-                <h3>Honey Garlic Chicken</h3>
-                <p>Sweet and savory, our honey garlic chicken is a crowd pleaser.</p>
-                <span>$11.99</span>
-            </div>
+
+    <!-- Menu Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Our Menu</h1>
+            <p>Discover Nashville-style hot chicken at its finest</p>
         </div>
     </section>
-    <section class="menu-category">
-        <h2>Sides</h2>
-        <div class="menu-item">
-            <img src="dc2f21b680024faca1f149936001ca66.avif" alt="Seasoned Fries">
-            <div>
-                <h3>Seasoned Fries</h3>
-                <p>Crispy fries seasoned with our signature spice mix.</p>
-                <span>$3.99</span>
+
+    <!-- Heat Level Guide -->
+    <section class="heat-guide">
+        <div class="container">
+            <h2>Heat Level Guide</h2>
+            <div class="heat-levels">
+                <div class="heat-level">
+                    <div class="heat-indicator level-1"></div>
+                    <span>No Spice</span>
+                </div>
+                <div class="heat-level">
+                    <div class="heat-indicator level-2"></div>
+                    <span>Mild</span>
+                </div>
+                <div class="heat-level">
+                    <div class="heat-indicator level-3"></div>
+                    <span>Medium</span>
+                </div>
+                <div class="heat-level">
+                    <div class="heat-indicator level-4"></div>
+                    <span>Hot</span>
+                </div>
+                <div class="heat-level">
+                    <div class="heat-indicator level-5"></div>
+                    <span>Extra Hot</span>
+                </div>
+                <div class="heat-level">
+                    <div class="heat-indicator level-6"></div>
+                    <span>Reaper</span>
+                </div>
             </div>
-        </div>
-        <div class="menu-item">
-            <img src="68e666ef6efb458dab30909927e8a43c.avif" alt="Garlic Bread">
-            <div>
-                <h3>Garlic Bread</h3>
-                <p>Freshly baked bread topped with garlic butter and herbs.</p>
-                <span>$2.50</span>
-            </div>
-        </div>
-        <div class="menu-item">
-            <img src="d51bcde6b06840789f68b8a06a023df4.avif" alt="Loaded Nachos">
-            <div>
-                <h3>Loaded Nachos</h3>
-                <p>Crispy nachos topped with jalapeños, salsa, and melted cheese.</p>
-                <span>$4.99</span>
-            </div>
-        </div>
-        <div class="menu-item">
-            <img src="e860a77e46d44d9284debcd26e3b1a31.avif" alt="Sweet Potato Fries">
-            <div>
-                <h3>Sweet Potato Fries</h3>
-                <p>Perfectly fried sweet potato fries with a hint of salt.</p>
-                <span>$3.75</span>
-            </div>
-        </div>
-        <div class="menu-item">
-            <img src="e375b168866245cbad959459df1ac74c.avif" alt="Coleslaw">
-            <div>
-                <h3>Coleslaw</h3>
-                <p>Freshly made with a tangy, creamy dressing.</p>
-                <span>$2.99</span>
-            </div>
+            <p class="heat-disclaimer">Choose your preferred heat level for any chicken item</p>
         </div>
     </section>
-    <section class="menu-category">
-        <h2>Single Person Menu</h2>
-        <div class="menu-item">
-            <img src="0434fb1bb9e2463cbe0b8f803b48b796.avif" alt="Single Meal Combo">
-            <div>
-                <h3>Single Meal Combo</h3>
-                <p>A perfect meal for one, featuring our best selections.</p>
-                <span>$9.99</span>
+
+    <!-- Menu Sections -->
+    <div class="menu-wrapper">
+        <div class="container">
+            <!-- Menu Navigation -->
+            <div class="menu-nav">
+                <button class="menu-nav-item active" data-target="chicken">Chicken</button>
+                <button class="menu-nav-item" data-target="sides">Sides</button>
+                <button class="menu-nav-item" data-target="combos">Combos</button>
+                <button class="menu-nav-item" data-target="drinks">Drinks</button>
             </div>
+            
+            <!-- Chicken Section -->
+            <section id="chicken" class="menu-section active">
+                <div class="section-header">
+                    <h2>Chicken</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="393238143a0f41a4ac4730155688c772.avif" alt="Spicy Grilled Chicken">
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Spicy Grilled Chicken</h3>
+                                <span class="price">$12.99</span>
+                            </div>
+                            <p>Deliciously marinated with a spicy rub, grilled to perfection. Served with house-made sauce.</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="cb06e1d5fe0c44caa98a82824cf39aad.avif" alt="Honey Garlic Chicken">
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Honey Garlic Chicken</h3>
+                                <span class="price">$11.99</span>
+                            </div>
+                            <p>Sweet and savory, our honey garlic chicken is a crowd pleaser. Glazed with our signature honey garlic sauce.</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="/placeholder.svg?height=300&width=300" alt="Nashville Hot Tenders">
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Nashville Hot Tenders</h3>
+                                <span class="price">$13.99</span>
+                            </div>
+                            <p>Our famous chicken tenders coated in Nashville-style hot spices. Served with cooling ranch sauce.</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="/placeholder.svg?height=300&width=300" alt="Classic Chicken Sandwich">
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Classic Chicken Sandwich</h3>
+                                <span class="price">$10.99</span>
+                            </div>
+                            <p>Crispy chicken breast on a toasted brioche bun with pickles, coleslaw, and Dave's special sauce.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Sides Section -->
+            <section id="sides" class="menu-section">
+                <div class="section-header">
+                    <h2>Sides</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="dc2f21b680024faca1f149936001ca66.avif" alt="Seasoned Fries">
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Seasoned Fries</h3>
+                                <span class="price">$3.99</span>
+                            </div>
+                            <p>Crispy fries seasoned with our signature spice mix. The perfect companion to our hot chicken.</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="68e666ef6efb458dab30909927e8a43c.avif" alt="Garlic Bread">
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Garlic Bread</h3>
+                                <span class="price">$2.50</span>
+                            </div>
+                            <p>Freshly baked bread topped with garlic butter and herbs. Perfectly toasted to a golden crisp.</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="d51bcde6b06840789f68b8a06a023df4.avif" alt="Loaded Nachos">
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Loaded Nachos</h3>
+                                <span class="price">$4.99</span>
+                            </div>
+                            <p>Crispy nachos topped with jalapeños, salsa, and melted cheese. Add chicken for $2.50 extra.</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="e860a77e46d44d9284debcd26e3b1a31.avif" alt="Sweet Potato Fries">
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Sweet Potato Fries</h3>
+                                <span class="price">$3.75</span>
+                            </div>
+                            <p>Perfectly fried sweet potato fries with a hint of salt. Served with our signature dipping sauce.</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="e375b168866245cbad959459df1ac74c.avif" alt="Coleslaw">
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Coleslaw</h3>
+                                <span class="price">$2.99</span>
+                            </div>
+                            <p>Freshly made with a tangy, creamy dressing. The perfect cool complement to our hot chicken.</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="/placeholder.svg?height=300&width=300" alt="Mac & Cheese">
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Mac & Cheese</h3>
+                                <span class="price">$4.50</span>
+                            </div>
+                            <p>Creamy, cheesy, and indulgent. Our signature mac & cheese is the ultimate comfort food.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Combos Section -->
+            <section id="combos" class="menu-section">
+                <div class="section-header">
+                    <h2>Meal Combos</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="0434fb1bb9e2463cbe0b8f803b48b796.avif" alt="Single Meal Combo">
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Single Meal Combo</h3>
+                                <span class="price">$14.99</span>
+                            </div>
+                            <p>2 tenders or 1 sandwich with 1 side and a drink. Perfect for a satisfying meal.</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="7222be8739894779a97a4e841513c46c.avif" alt="Vegetarian Delight">
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Vegetarian Delight</h3>
+                                <span class="price">$12.99</span>
+                            </div>
+                            <p>A delightful assortment of our vegetarian sides, including mac & cheese, coleslaw, and garlic bread.</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="a90870a02d7a4acbb01a821db0b2d6bb.avif" alt="Quick Snack Pack">
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Quick Snack Pack</h3>
+                                <span class="price">$8.99</span>
+                            </div>
+                            <p>2 tenders with 1 side. Snack-sized portions perfect for a quick bite.</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="c101b7584f9b43e78426de2b97f191b9.avif" alt="Family Feast">
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Family Feast</h3>
+                                <span class="price">$32.99</span>
+                            </div>
+                            <p>8 tenders or 4 sandwiches with 3 regular sides. Perfect for sharing with family and friends.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Drinks Section -->
+            <section id="drinks" class="menu-section">
+                <div class="section-header">
+                    <h2>Drinks</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="40f5dc0225474feeaba3347fc7b7dbdb.avif" alt="Fresh Lemonade">
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Fresh Lemonade</h3>
+                                <span class="price">$2.50</span>
+                            </div>
+                            <p>Refreshing lemonade made with freshly squeezed lemons. The perfect way to cool down the heat.</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="c1d79714da6e430f96883b97b3d38b4c.avif" alt="Iced Tea">
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Iced Tea</h3>
+                                <span class="price">$2.00</span>
+                            </div>
+                            <p>Classic iced tea, perfect for a hot day. Available sweetened or unsweetened.</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="d946cecff2ed4a8d9ca178df370a31a6.avif" alt="Cold Brew Coffee">
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Cold Brew Coffee</h3>
+                                <span class="price">$3.00</span>
+                            </div>
+                            <p>Smooth and bold cold brew, a great pick-me-up. Brewed for 24 hours for the perfect flavor.</p>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="ecdd026c5f114af9a291bd4c6397d1d4.avif" alt="Craft Beer">
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3>Craft Beer</h3>
+                                <span class="price">$5.00</span>
+                            </div>
+                            <p>A selection of local craft beers. Ask your server about our rotating selection.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-        <div class="menu-item">
-            <img src="7222be8739894779a97a4e841513c46c.avif" alt="Vegetarian Delight">
-            <div>
-                <h3>Vegetarian Delight</h3>
-                <p>A delightful assortment of our vegetarian options.</p>
-                <span>$8.99</span>
-            </div>
-        </div>
-        <div class="menu-item">
-            <img src="a90870a02d7a4acbb01a821db0b2d6bb.avif" alt="Quick Snack Pack">
-            <div>
-                <h3>Quick Snack Pack</h3>
-                <p>Snack-sized portions perfect for a quick bite.</p>
-                <span>$5.99</span>
-            </div>
-        </div>
-        <div class="menu-item">
-            <img src="c101b7584f9b43e78426de2b97f191b9.avif" alt="Healthy Option">
-            <div>
-                <h3>Healthy Option</h3>
-                <p>Light and nutritious, ideal for health-conscious diners.</p>
-                <span>$7.99</span>
-            </div>
+    </div>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Order?</h2>
+            <p>Visit us today or order online for pickup or delivery</p>
+            <a href="#" class="btn btn-large">Order Now</a>
         </div>
     </section>
-    <section class="menu-category">
-        <h2>Drinks</h2>
-        <div class="menu-item">
-            <img src="40f5dc0225474feeaba3347fc7b7dbdb.avif" alt="Fresh Lemonade">
-            <div>
-                <h3>Fresh Lemonade</h3>
-                <p>Refreshing lemonade made with freshly squeezed lemons.</p>
-                <span>$2.50</span>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="daveshotchickenlogo.png" alt="Dave's Hot Chicken Logo">
+                    <span>Dave's Hot Chicken</span>
+                </div>
+                <div class="footer-info">
+                    <div class="footer-section">
+                        <h3>Location</h3>
+                        <p>📍 123 Food Street, New York</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Hours</h3>
+                        <p>Monday - Saturday: 10am - 10pm</p>
+                        <p>Sunday: 11am - 9pm</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Connect</h3>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook">Facebook</a>
+                            <a href="#" aria-label="Instagram">Instagram</a>
+                            <a href="#" aria-label="Twitter">Twitter</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Dave's Hot Chicken. All rights reserved.</p>
             </div>
         </div>
-        <div class="menu-item">
-            <img src="c1d79714da6e430f96883b97b3d38b4c.avif" alt="Iced Tea">
-            <div>
-                <h3>Iced Tea</h3>
-                <p>Classic iced tea, perfect for a hot day.</p>
-                <span>$2.00</span>
-            </div>
-        </div>
-        <div class="menu-item">
-            <img src="d946cecff2ed4a8d9ca178df370a31a6.avif" alt="Cold Brew Coffee">
-            <div>
-                <h3>Cold Brew Coffee</h3>
-                <p>Smooth and bold cold brew, a great pick-me-up.</p>
-                <span>$3.00</span>
-            </div>
-        </div>
-        <div class="menu-item">
-            <img src="ecdd026c5f114af9a291bd4c6397d1d4.avif" alt="Craft Beer">
-            <div>
-                <h3>Craft Beer</h3>
-                <p>A selection of local craft beers.</p>
-                <span>$4.00</span>
-            </div>
-        </div>
-    </section>
+    </footer>
+
+    <script>
+        // Toggle mobile menu
+        document.getElementById('hamburger').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.getElementById('nav-menu').classList.toggle('active');
+        });
+
+        // Menu tab navigation
+        const menuNavItems = document.querySelectorAll('.menu-nav-item');
+        const menuSections = document.querySelectorAll('.menu-section');
+
+        menuNavItems.forEach(item => {
+            item.addEventListener('click', function() {
+                // Remove active class from all nav items
+                menuNavItems.forEach(navItem => navItem.classList.remove('active'));
+                // Add active class to clicked nav item
+                this.classList.add('active');
+                
+                // Hide all menu sections
+                menuSections.forEach(section => section.classList.remove('active'));
+                // Show the target section
+                const targetSection = document.getElementById(this.dataset.target);
+                if (targetSection) {
+                    targetSection.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>

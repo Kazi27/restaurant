@@ -4,73 +4,157 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dave's Hot Chicken - Home</title>
-    <link href="https://fonts.googleapis.com/css2?family=Flamenco&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Header & Navigation -->
     <header>
-        <div class="logo">
-            <img src="daveshotchickenlogo.png" alt="Dave's Hot Chicken Logo" style="height: 60px;">
-            <span class="restaurant-name">Dave's Hot Chicken</span>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="daveshotchickenlogo.png" alt="Dave's Hot Chicken Logo">
+                <span class="restaurant-name">Dave's Hot Chicken</span>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="order-btn"><a href="#" class="btn">Order Now</a></li>
+                </ul>
+            </nav>
         </div>
-        <button class="hamburger" onclick="toggleMenu()">☰</button>
-        <nav>
-            <ul id="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-    <img src="hero-banner.jpg" alt="Dave's Hot Chicken Banner" style="width:100%; max-height: 500px; object-fit: cover;">
-    <div class="hero-text">
-        <h1>What Happens In DAVE'S Stays In Dave's</h1>
-        <p>Explore the taste of our legendary hot chicken</p>
-    </div>
-</section>
+        <div class="hero-image">
+            <img src="hero-banner.jpg" alt="Dave's Hot Chicken Banner">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content container">
+            <h1>What Happens In <span>DAVE'S</span> <br>Stays In Dave's</h1>
+            <p>Explore the taste of our legendary hot chicken</p>
+            <a href="menu.html" class="btn btn-large">View Our Menu</a>
+        </div>
+    </section>
 
-<section class="image-feature">
-    <!-- This section will have the background image -->
-</section>
+    <!-- Featured Section -->
+    <section class="featured">
+        <div class="container">
+            <div class="featured-grid">
+                <div class="featured-item">
+                    <div class="icon">🔥</div>
+                    <h3>Spice Levels</h3>
+                    <p>From No Spice to Reaper, customize your heat level</p>
+                </div>
+                <div class="featured-item">
+                    <div class="icon">🍗</div>
+                    <h3>Fresh Quality</h3>
+                    <p>All chicken is fresh, never frozen, and prepared daily</p>
+                </div>
+                <div class="featured-item">
+                    <div class="icon">⏱️</div>
+                    <h3>Quick Service</h3>
+                    <p>Fast service without compromising on quality</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Feature Section -->
+    <section class="image-feature">
+        <div class="container">
+            <div class="image-feature-content">
+                <h2>Nashville-Style<br>Hot Chicken</h2>
+                <p>Hand-breaded and infused with our signature spice blends</p>
+                <a href="menu.html" class="btn">Explore Menu</a>
+            </div>
+        </div>
+    </section>
 
     <!-- About Section -->
     <section class="about">
-        <h2>About Us</h2>
-        <p>
-            Founded in 2017 in the heart of Hollywood, Dave’s Hot Chicken started as a simple pop-up in a parking lot, quickly becoming a cultural phenomenon with a cult following. Our founder, Chef Dave, began with a passion for bold flavors and a simple mission: to serve the best hot chicken outside of Nashville.
-        </p>
-        <p>
-            Each piece of our chicken is expertly cooked to perfection, using a secret blend of spices that has been meticulously crafted to ensure every bite is as memorable as the last. Our signature dish, the “Fire Fowl Slider”, combines crispy chicken with coleslaw and pickles, all drizzled with Dave’s special sauce, creating a taste sensation that keeps our fans coming back for more.
-        </p>
-        <p>
-            At Dave’s Hot Chicken, we are committed to more than just great food. Our mission is to serve our community by providing a friendly, vibrant atmosphere where everyone can enjoy a meal and feel like part of the Dave’s family. Whether you’re a heat seeker or just chicken-curious, we promise an experience that’s not just delicious but truly unforgettable.
-        </p>
-        <p>
-            Join us and experience why “What Happens In DAVE’S, Stays In Dave’s” isn’t just a slogan—it’s a lifestyle.
-        </p>
+        <div class="container">
+            <div class="section-header">
+                <h2>About Us</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Founded in 2017 in the heart of Hollywood, Dave's Hot Chicken started as a simple pop-up in a parking lot, quickly becoming a cultural phenomenon with a cult following. Our founder, Chef Dave, began with a passion for bold flavors and a simple mission: to serve the best hot chicken outside of Nashville.
+                    </p>
+                    <p>
+                        Each piece of our chicken is expertly cooked to perfection, using a secret blend of spices that has been meticulously crafted to ensure every bite is as memorable as the last. Our signature dish, the "Fire Fowl Slider", combines crispy chicken with coleslaw and pickles, all drizzled with Dave's special sauce, creating a taste sensation that keeps our fans coming back for more.
+                    </p>
+                    <p>
+                        At Dave's Hot Chicken, we are committed to more than just great food. Our mission is to serve our community by providing a friendly, vibrant atmosphere where everyone can enjoy a meal and feel like part of the Dave's family. Whether you're a heat seeker or just chicken-curious, we promise an experience that's not just delicious but truly unforgettable.
+                    </p>
+                    <p>
+                        Join us and experience why "What Happens In DAVE'S, Stays In Dave's" isn't just a slogan—it's a lifestyle.
+                    </p>
+                </div>
+                <div class="about-image">
+                    <img src="/placeholder.svg?height=500&width=400" alt="Dave's Hot Chicken Restaurant">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Experience the Heat?</h2>
+            <p>Visit us today or order online for pickup or delivery</p>
+            <a href="#" class="btn btn-large">Order Now</a>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>Follow us on:</p>
-        <a href="#">Facebook</a> | <a href="#">Instagram</a>
-        <p>📍 123 Food Street, New York</p>
-        <p>Open Hours: Mon-Sat 10am - 10pm</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="daveshotchickenlogo.png" alt="Dave's Hot Chicken Logo">
+                    <span>Dave's Hot Chicken</span>
+                </div>
+                <div class="footer-info">
+                    <div class="footer-section">
+                        <h3>Location</h3>
+                        <p>📍 123 Food Street, New York</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Hours</h3>
+                        <p>Monday - Saturday: 10am - 10pm</p>
+                        <p>Sunday: 11am - 9pm</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Connect</h3>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook">Facebook</a>
+                            <a href="#" aria-label="Instagram">Instagram</a>
+                            <a href="#" aria-label="Twitter">Twitter</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Dave's Hot Chicken. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
     <script>
-        function toggleMenu() {
-            const menu = document.getElementById('nav-menu');
-            if (menu.style.display === 'block') {
-                menu.style.display = 'none';
-            } else {
-                menu.style.display = 'block';
-            }
-        }
+        document.getElementById('hamburger').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.getElementById('nav-menu').classList.toggle('active');
+        });
     </script>
 </body>
 </html>
