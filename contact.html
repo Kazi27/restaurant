@@ -1,1 +1,209 @@
-<!-- hi -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dave's Hot Chicken - Contact Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="daveshotchickenlogo.png" alt="Dave's Hot Chicken Logo">
+                <span class="restaurant-name">Dave's Hot Chicken</span>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li class="order-btn"><a href="#" class="btn">Order Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you!</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">📍</div>
+                        <h3>Our Location</h3>
+                        <p>61-45 188th St, Fresh Meadows, NY 11365</p>
+                        <p class="small">Located in: Fresh Meadows Place</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">📞</div>
+                        <h3>Phone Number</h3>
+                        <p><a href="tel:+13474941940">(347) 494-1940</a></p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">⏰</div>
+                        <h3>Hours of Operation</h3>
+                        <div class="hours-list">
+                            <div class="hours-item">
+                                <span>Monday:</span>
+                                <span>11 AM–11 PM</span>
+                            </div>
+                            <div class="hours-item">
+                                <span>Tuesday:</span>
+                                <span>11 AM–11 PM</span>
+                            </div>
+                            <div class="hours-item">
+                                <span>Wednesday:</span>
+                                <span>11 AM–11 PM</span>
+                            </div>
+                            <div class="hours-item">
+                                <span>Thursday:</span>
+                                <span>11 AM–11 PM</span>
+                            </div>
+                            <div class="hours-item">
+                                <span>Friday:</span>
+                                <span>11 AM–11 PM</span>
+                            </div>
+                            <div class="hours-item">
+                                <span>Saturday:</span>
+                                <span>11 AM–11 PM</span>
+                            </div>
+                            <div class="hours-item">
+                                <span>Sunday:</span>
+                                <span>11 AM–11 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">📱</div>
+                        <h3>Follow Us</h3>
+                        <div class="social-links-large">
+                            <a href="https://www.facebook.com/ToLiveandFryInLA" target="_blank" class="social-link">
+                                <!-- <span class="social-icon">facebook</span> -->
+                                <span>Facebook</span>
+                            </a>
+                            <a href="https://www.instagram.com/daveshotchicken/" target="_blank" class="social-link">
+                                <!-- <span class="social-icon">instagram</span> -->
+                                <span>Instagram</span>
+                            </a>
+                            <a href="https://www.tiktok.com/@daveshotchicken" target="_blank" class="social-link">
+                                <!-- <span class="social-icon">tiktok</span> -->
+                                <span>TikTok</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h2>Send Us a Message</h2>
+                    <p>Have a question or feedback? Fill out the form below and we'll get back to you as soon as possible.</p>
+                    
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="Your email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number (Optional)</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Your phone number">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-large">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Find Us</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095854716!2d-73.79385872346847!3d40.73376597138293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c260d9b329d915%3A0x5d2cb4f95c9c3d87!2s61-45%20188th%20St%2C%20Fresh%20Meadows%2C%20NY%2011365!5e0!3m2!1sen!2sus!4v1710186642146!5m2!1sen!2sus" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Experience the Heat?</h2>
+            <p>Visit us today or order online for pickup or delivery</p>
+            <a href="#" class="btn btn-large">Order Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+    <script>
+        // Toggle mobile menu
+        document.getElementById('hamburger').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.getElementById('nav-menu').classList.toggle('active');
+        });
+
+        // Load footer
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading footer:', error);
+            });
+
+        // Form submission handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Here you would typically send the form data to a server
+            // For now, we'll just show an alert
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
