@@ -10,10 +10,17 @@ header {
     padding: 10px 20px;
     text-align: center;
     position: relative;
+    z-index: 1000; /* Ensure the header is above other content */
 }
 
-header .logo {
-    font-size: 1.5em;
+header .logo img {
+    height: 60px; /* Adjust based on actual logo size */
+}
+
+header .logo .restaurant-name {
+    font-size: 1.8em;
+    margin-left: 10px;
+    color: #FFD700; /* Golden color for the name next to logo */
 }
 
 header nav ul {
@@ -41,23 +48,60 @@ header nav ul li a {
     border: none;
     color: white;
     cursor: pointer;
+    z-index: 1001; /* Higher z-index to ensure visibility */
 }
 
 .hero {
-    background: url('hero-image.jpg') no-repeat center center/cover;
-    color: #fff;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    position: relative;
     text-align: center;
+    color: #fff;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.image-feature {
+    background: url('hero-banner2.jpg') no-repeat center center/cover;
+    height: 500px; /* Adjust this value based on how much of the image you want to display */
 }
 
 .about, footer {
     text-align: center;
     padding: 20px;
 }
+
+.about {
+    background: #fff;
+    color: #333;
+    padding: 40px 20px;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.about h2 {
+    text-align: center;
+    color: #d32323;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+
 
 footer {
     background: #333;
@@ -69,20 +113,22 @@ footer {
     .hamburger {
         display: block;
     }
-    
+
     header nav ul {
-        display: none;
-        width: 100%;
-        background: #333;
-        position: absolute;
-        top: 60px;
+        list-style-type: none;
+        padding: 0;
+        position: absolute; /* Added to position on top of other content */
+        background-color: #333; /* Background color for readability */
+        width: 100%; /* Full width to cover the content below */
+        z-index: 1000; /* Ensure menu items are not behind images or other sections */
+        display: none; /* Updated to ensure it doesn't show by default */
+        top: 60px; /* Positioning right below the header */
         left: 0;
     }
 
     header nav ul li {
-        display: block;
+        display: block; /* Stack vertically */
         text-align: center;
-        margin-right: 0;
+        margin: 10px 0; /* Spacing for tap targets */
     }
 }
-
