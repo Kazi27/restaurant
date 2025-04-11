@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <!-- Header & Navigation -->
     <header>
@@ -28,6 +29,10 @@
                     <li class="order-btn"><a href="#" class="btn">Order Now</a></li>
                 </ul>
             </nav>
+            <button id="cart-toggle" class="cart-toggle" aria-label="View cart">
+                🛒
+                <span id="cart-badge" class="cart-badge">0</span>
+            </button>
         </div>
     </header>
 
@@ -79,71 +84,95 @@
     </section>
 
     <!-- About Section -->
-<section class="about">
-    <div class="container">
-        <div class="section-header">
-            <h2>About Us</h2>
-            <div class="divider"></div>
-        </div>
-        <div class="about-content">
-            <div class="about-text">
-                <p>
-                    Founded in 2017 in the heart of Hollywood, Dave's Hot Chicken started as a simple pop-up in a parking lot, quickly becoming a cultural phenomenon with a cult following. Our founder, Chef Dave, began with a passion for bold flavors and a simple mission: to serve the best hot chicken outside of Nashville.
-                </p>
-                <p>
-                    Each piece of our chicken is expertly cooked to perfection, using a secret blend of spices that has been meticulously crafted to ensure every bite is as memorable as the last. Our signature dish, the "Fire Fowl Slider", combines crispy chicken with coleslaw and pickles, all drizzled with Dave's special sauce, creating a taste sensation that keeps our fans coming back for more.
-                </p>
-                <p>
-                    At Dave's Hot Chicken, we are committed to more than just great food. Our mission is to serve our community by providing a friendly, vibrant atmosphere where everyone can enjoy a meal and feel like part of the Dave's family. Whether you're a heat seeker or just chicken-curious, we promise an experience that's not just delicious but truly unforgettable.
-                </p>
-                <p>
-                    Join us and experience why "What Happens In DAVE'S, Stays In Dave's" isn't just a slogan—it's a lifestyle.
-                </p>
+    <section class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Us</h2>
+                <div class="divider"></div>
             </div>
-        </div>
-        
-        <!-- Image Gallery Slider -->
-        <div class="gallery-container">
-            <h3>Our Food & Atmosphere</h3>
-            <div class="gallery-slider">
-                <div class="slider-wrapper">
-                    <div class="slider-track">
-                        <div class="slide">
-                            <img src="interior1.png" alt="Restaurant Interior 1">
-                        </div>
-                        <div class="slide">
-                            <img src="interior2.png" alt="Restaurant Interior 2">
-                        </div>
-                        <div class="slide">
-                            <img src="interior3.png" alt="Restaurant Interior 3">
-                        </div>
-                        <div class="slide">
-                            <img src="interior4.png" alt="Restaurant Interior 4">
-                        </div>
-                        <div class="slide">
-                            <img src="interior5.png" alt="Restaurant Interior 5">
-                        </div>
-                        <div class="slide">
-                            <img src="interior6.png" alt="Restaurant Interior 6">
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Founded in 2017 in the heart of Hollywood, Dave's Hot Chicken started as a simple pop-up in a parking lot, quickly becoming a cultural phenomenon with a cult following. Our founder, Chef Dave, began with a passion for bold flavors and a simple mission: to serve the best hot chicken outside of Nashville.
+                    </p>
+                    <p>
+                        Each piece of our chicken is expertly cooked to perfection, using a secret blend of spices that has been meticulously crafted to ensure every bite is as memorable as the last. Our signature dish, the "Fire Fowl Slider", combines crispy chicken with coleslaw and pickles, all drizzled with Dave's special sauce, creating a taste sensation that keeps our fans coming back for more.
+                    </p>
+                    <p>
+                        At Dave's Hot Chicken, we are committed to more than just great food. Our mission is to serve our community by providing a friendly, vibrant atmosphere where everyone can enjoy a meal and feel like part of the Dave's family. Whether you're a heat seeker or just chicken-curious, we promise an experience that's not just delicious but truly unforgettable.
+                    </p>
+                    <p>
+                        Join us and experience why "What Happens In DAVE'S, Stays In Dave's" isn't just a slogan—it's a lifestyle.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Image Gallery Slider -->
+            <div class="gallery-container">
+                <h3>Our Food & Atmosphere</h3>
+                <div class="gallery-slider">
+                    <div class="slider-wrapper">
+                        <div class="slider-track">
+                            <div class="slide">
+                                <img src="/placeholder.svg?height=400&width=600" alt="Nashville Hot Chicken Sandwich">
+                            </div>
+                            <div class="slide">
+                                <img src="/placeholder.svg?height=400&width=600" alt="Restaurant Interior">
+                            </div>
+                            <div class="slide">
+                                <img src="/placeholder.svg?height=400&width=600" alt="Chicken Tenders and Fries">
+                            </div>
+                            <div class="slide">
+                                <img src="/placeholder.svg?height=400&width=600" alt="Dining Area">
+                            </div>
+                            <div class="slide">
+                                <img src="/placeholder.svg?height=400&width=600" alt="Spicy Chicken Platter">
+                            </div>
+                            <div class="slide">
+                                <img src="/placeholder.svg?height=400&width=600" alt="Restaurant Bar Area">
+                            </div>
                         </div>
                     </div>
+                    <button class="slider-btn prev-btn" aria-label="Previous slide">❮</button>
+                    <button class="slider-btn next-btn" aria-label="Next slide">❯</button>
+                    <div class="slider-dots"></div>
                 </div>
-                <button class="slider-btn prev-btn" aria-label="Previous slide">❮</button>
-                <button class="slider-btn next-btn" aria-label="Next slide">❯</button>
-                <div class="slider-dots"></div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Call to Action -->
     <section class="cta">
         <div class="container">
             <h2>Ready to Experience the Heat?</h2>
             <p>Visit us today or order online for pickup or delivery</p>
-            <a href="#" class="btn btn-large">Order Now</a>
+            <a href="menu.html" class="btn btn-large">Order Now</a>
         </div>
     </section>
+
+    <!-- Shopping Cart Sidebar -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="cart-close" id="cart-close" aria-label="Close cart">×</button>
+        </div>
+        <div id="empty-cart-message" class="empty-cart-message">
+            Your cart is empty. Add some delicious items!
+        </div>
+        <div id="cart-items" class="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total-row">
+                <span>Total:</span>
+                <span id="cart-total">$0.00</span>
+            </div>
+            <div class="cart-actions">
+                <button id="clear-cart" class="btn clear-cart">Clear Cart</button>
+                <button id="checkout-btn" class="btn">Checkout</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <div id="footer-container"></div>
@@ -164,107 +193,115 @@
                 console.error('Error loading footer:', error);
             });
 
-// Image Gallery Slider
-document.addEventListener('DOMContentLoaded', function() {
-    const track = document.querySelector('.slider-track');
-    const slides = Array.from(document.querySelectorAll('.slide'));
-    const nextButton = document.querySelector('.next-btn');
-    const prevButton = document.querySelector('.prev-btn');
-    const dotsContainer = document.querySelector('.slider-dots');
-    
-    if (!track || !slides.length || !nextButton || !prevButton || !dotsContainer) return;
-    
-    const slideWidth = slides[0].getBoundingClientRect().width;
-    let currentIndex = 0;
-    
-    // Position slides next to each other
-    slides.forEach((slide, index) => {
-        slide.style.left = slideWidth * index + 'px';
-    });
-    
-    // Create dots
-    slides.forEach((_, index) => {
-        const dot = document.createElement('button');
-        dot.classList.add('slider-dot');
-        if (index === 0) dot.classList.add('active');
-        dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
-        dotsContainer.appendChild(dot);
-        
-        dot.addEventListener('click', () => {
-            goToSlide(index);
-        });
-    });
-    
-    const dots = Array.from(document.querySelectorAll('.slider-dot'));
-    
-    // Move to a specific slide
-    const goToSlide = (index) => {
-        if (index < 0) index = slides.length - 1;
-        if (index >= slides.length) index = 0;
-        
-        track.style.transform = `translateX(-${slideWidth * index}px)`;
-        
-        // Update active dot
-        dots.forEach(dot => dot.classList.remove('active'));
-        dots[index].classList.add('active');
-        
-        currentIndex = index;
-    };
-    
-    // Next and previous buttons
-    nextButton.addEventListener('click', () => {
-        goToSlide(currentIndex + 1);
-    });
-    
-    prevButton.addEventListener('click', () => {
-        goToSlide(currentIndex - 1);
-    });
-    
-    // Auto slide every 5 seconds
-    let slideInterval = setInterval(() => {
-        goToSlide(currentIndex + 1);
-    }, 5000);
-    
-    // Pause auto slide on hover
-    const sliderContainer = document.querySelector('.gallery-slider');
-    sliderContainer.addEventListener('mouseenter', () => {
-        clearInterval(slideInterval);
-    });
-    
-    sliderContainer.addEventListener('mouseleave', () => {
-        slideInterval = setInterval(() => {
-            goToSlide(currentIndex + 1);
-        }, 5000);
-    });
-    
-    // Handle touch events for mobile
-    let startX;
-    let isDragging = false;
-    
-    track.addEventListener('touchstart', (e) => {
-        startX = e.touches[0].clientX;
-        isDragging = true;
-    });
-    
-    track.addEventListener('touchmove', (e) => {
-        if (!isDragging) return;
-        const currentX = e.touches[0].clientX;
-        const diff = startX - currentX;
-        
-        if (Math.abs(diff) > 50) {
-            if (diff > 0) {
+        // Image Gallery Slider
+        document.addEventListener('DOMContentLoaded', function() {
+            const track = document.querySelector('.slider-track');
+            const slides = Array.from(document.querySelectorAll('.slide'));
+            const nextButton = document.querySelector('.next-btn');
+            const prevButton = document.querySelector('.prev-btn');
+            const dotsContainer = document.querySelector('.slider-dots');
+            
+            if (!track || !slides.length || !nextButton || !prevButton || !dotsContainer) return;
+            
+            const slideWidth = slides[0].getBoundingClientRect().width;
+            let currentIndex = 0;
+            
+            // Position slides next to each other
+            slides.forEach((slide, index) => {
+                slide.style.left = slideWidth * index + 'px';
+            });
+            
+            // Create dots
+            slides.forEach((_, index) => {
+                const dot = document.createElement('button');
+                dot.classList.add('slider-dot');
+                if (index === 0) dot.classList.add('active');
+                dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
+                dotsContainer.appendChild(dot);
+                
+                dot.addEventListener('click', () => {
+                    goToSlide(index);
+                });
+            });
+            
+            const dots = Array.from(document.querySelectorAll('.slider-dot'));
+            
+            // Move to a specific slide
+            const goToSlide = (index) => {
+                if (index < 0) index = slides.length - 1;
+                if (index >= slides.length) index = 0;
+                
+                track.style.transform = `translateX(-${slideWidth * index}px)`;
+                
+                // Update active dot
+                dots.forEach(dot => dot.classList.remove('active'));
+                dots[index].classList.add('active');
+                
+                currentIndex = index;
+            };
+            
+            // Next and previous buttons
+            nextButton.addEventListener('click', () => {
                 goToSlide(currentIndex + 1);
-            } else {
+            });
+            
+            prevButton.addEventListener('click', () => {
                 goToSlide(currentIndex - 1);
-            }
-            isDragging = false;
-        }
-    });
+            });
+            
+            // Auto slide every 5 seconds
+            let slideInterval = setInterval(() => {
+                goToSlide(currentIndex + 1);
+            }, 5000);
+            
+            // Pause auto slide on hover
+            const sliderContainer = document.querySelector('.gallery-slider');
+            sliderContainer.addEventListener('mouseenter', () => {
+                clearInterval(slideInterval);
+            });
+            
+            sliderContainer.addEventListener('mouseleave', () => {
+                slideInterval = setInterval(() => {
+                    goToSlide(currentIndex + 1);
+                }, 5000);
+            });
+            
+            // Handle touch events for mobile
+            let startX;
+            let isDragging = false;
+            
+            track.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+                isDragging = true;
+            });
+            
+            track.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+                const currentX = e.touches[0].clientX;
+                const diff = startX - currentX;
+                
+                if (Math.abs(diff) > 50) {
+                    if (diff > 0) {
+                        goToSlide(currentIndex + 1);
+                    } else {
+                        goToSlide(currentIndex - 1);
+                    }
+                    isDragging = false;
+                }
+            });
+            
+            track.addEventListener('touchend', () => {
+                isDragging = false;
+            });
+        });
+        
+        // Close cart when clicking the close button
+        document.getElementById('cart-close').addEventListener('click', function() {
+            document.getElementById('cart-sidebar').classList.remove('active');
+        });
+    </script>
     
-    track.addEventListener('touchend', () => {
-        isDragging = false;
-    });
-});
-</script>
+    <!-- Shopping Cart Script -->
+    <script src="cart.js"></script>
 </body>
 </html>
